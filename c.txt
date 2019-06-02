@@ -1,0 +1,16 @@
+Once the reading of the input is complete, create a command line interface for the user which allows them to search for different words existing in the messages. When a word is found in a message, display the matching message. Display any matching words in uppercase. Allow the user to enter -1 to exit the program.
+
+When the program terminates, display a summary containing the number of searches performed along with the number of words matched across ALL input files. You can also include other summary information if you would like.
+
+Please complete this task and send me:
+	1. A zipped file that includes source code. Please do NOT include any binaries.
+	2. Simple instructions on how we should compile and run your code
+	3. A simple explanation on the design of your code
+	4. A list of third-party libraries used if there is any
+
+Bonus point:
+In the assignment, we assume that the memory is big enough to store the entire message. Describe a solution that does not depend on this assumption on paper.
+
+Thank you again for your interest in InsightFinder. I look forward to hearing back from you.
+
+Thank you,
