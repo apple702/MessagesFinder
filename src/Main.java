@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.*;
-import java.io.*;
 
 public class Main {
 
@@ -28,26 +27,42 @@ public class Main {
             e.printStackTrace();
         }
 
+        List<List<String>> sourse = new ArrayList<>();
+        for (String s : fileNames) {
+            sourse.add(readFile(s));
+        }
 
         while (true) {
 
             System.out.println("Please type a word,  \"- 1\" to exit:");
-
 
             String input = in.nextLine();
 
             if (input.equals("-1")) {
                 break;
             }
-            //TODO search
 
+            searchTimes++;
+            int currMatch = 0;
+            for (List<String> list : sourse) {
+                for (String s : list) {
+                    if (s.contains(input)) {
+                        System.out.println("Matching message is \"" + s + "\". Matching word is \"" + input.toUpperCase() + "\"");
+                        currMatch++;
+                    }
+                }
+            }
+            if (currMatch == 0)
+                System.out.println("No words found");
+
+            numberOfMatch += currMatch;
         }
 
         System.out.println("Summary: " + searchTimes + " searches performed, " + numberOfMatch + " words matched across all input files");
 
     }
 
-    public List<String> readFile(String fileName) {
+    public static List<String> readFile(String fileName) {
         File file = new File(fileName);
         List<String> list = new ArrayList<>();
         StringBuilder sb = new StringBuilder();
@@ -72,12 +87,11 @@ public class Main {
             }
 
             reader.close();
-            return list;
         }
         catch (Exception e) {
             e.printStackTrace();
         }
-
+        return list;
     }
 }
 

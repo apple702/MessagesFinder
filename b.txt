@@ -1,0 +1,4 @@
+I have carefully reviewed your resume and would like to set up a video call with you to better understand who you are and your engineering abilities. Before we talk, I usually like to have candidates finish a small coding test. The results of this will be reviewed before our call and will help guide our conversation.
+
+What we would like you to implement (in Java) is the following:
+Write a program that reads N messages from M input files. These input messages can contain any characters but you can assume each message can be delimited by the newline (\n) character. You can also assume the messages will all fit in memory.
